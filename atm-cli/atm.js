@@ -37,6 +37,9 @@ import inquirer from "inquirer";
                     if (input > userData.amount) {
                         return "Insufficient Balance, Press up key to update amount.";
                     }
+                    else if (isNaN(input)) {
+                        return "Enter valid number";
+                    }
                     else {
                         return true;
                     }

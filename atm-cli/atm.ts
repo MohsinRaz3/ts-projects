@@ -42,6 +42,9 @@ import inquirer from "inquirer";
                     validate: (input)=>{
                         if(input > userData.amount){
                             return "Insufficient Balance, Press up key to update amount."
+                        }else if(isNaN(input)){
+                            return "Enter valid number"
+
                         } else{
                             return true
                         }
